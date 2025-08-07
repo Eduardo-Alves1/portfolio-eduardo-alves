@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "photo": "assets/perfil.jpg"
+  },
+  "sobre": {
+    "texto": "Profissional de QA com foco em automação de testes, qualidade de software e melhoria contínua. Experiência com pipelines CI/CD, testes E2E e testes de API.",
+    "skills": ["QA", "Testes Manuais","Testes Automatizados", "Cypress", "Playwright", "Selenium", "Postman", "Jest", "Git", "CI/CD"]
+  },
+  "experiencia": [
+    {
+      "empresa": "E2E Coders",
+      "cargo": "QA Engineer",
+      "inicio": "Jan/2025",
+      "fim": "Atual",
+      "local": "Remoto",
+      "responsabilidades": [
+        "Jira – Gestão de tarefas",
+        "Selenium WebDriver – Automação de testes",
+        "Postman – Testes de APIs REST",
+        "Slack – Comunicação com squads",
+        "Visual Studio Code – Desenvolvimento e versionamento de scripts",
+        "Aqua – Desenvolvimento e versionamento de Scripts de testes"
+      ],
+      "stack": ["Cypress", "GitHub Actions", "TypeScript", "Selenium", "Java", "JUnit"]
+    },
+    {
+      "empresa": "Ituran Brasil",
+      "cargo": "Customer Success Specialist",
+      "inicio": "Out/2014",
+      "fim": "Jun/2025",
+      "local": "São Paulo, SP",
+      "responsabilidades": [
+        " Teste de Software - No sistema de gestão de frotas, quando era liberada Features novas. Atuando com Testes Manuais.",
+        "Em minhas funções algumas delas repetitivas, realizava automação de tarefas,utilizando, Python, Selenium.",
+        "Gerenciamento de carteira de clientes B2B, garantindo engajamento e sucesso contínuo com as soluções oferecidas.",
+        "Realização de reuniões estratégicas com stakeholders para análise de performance, KPIs e alinhamento de objetivos.",
+        "Análise de dados e indicadores de uso da plataforma, propondo melhorias com base em insights estratégicos.",
+        "Desenvolvimento de treinamentos personalizados para capacitação dos usuários finais."
+      ],
+      "stack": ["Python", "Selenium", "Pyathogui"]
+    }
+  ],
+  "projetos": [
+    { "titulo": "Suite E2E com Cypress", "imagem": "assets/cypress.png","link": "#" },
+    { "titulo": "Teste de API com Postman", "imagem": "assets/projeto2.jpg", "link": "#" },
+    { "titulo": "Automação de Regressão", "imagem": "assets/projeto3.jpg" }
+  ],
+  "contatos": [
+    { "label": "E-mail", "url": "eduardo.santos.alves14@gmail.com", "icone": "✉️" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/eduardo-alves-124320b9/", "icone": "💼" },
+    { "label": "GitHub", "url": "https://github.com/Eduardo-Alves1", "icone": "🐙" }
+  ]
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfólio • Eduardo Alves • QA</title>
+    <meta name="description" content="Portfólio de Eduardo Alves, Quality Assurance (QA)." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#top">Eduardo Alves <span class="role">QA</span></a>
+        <nav class="nav">
+          <a href="#sobre">Sobre</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+          <button id="themeToggle" aria-label="Alternar tema">🌓</button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-text">
+          <h1>Eduardo Alves</h1>
+          <p class="subtitle">Quality Assurance • Testes Automatizados • Melhoria Contínua</p>
+          <div class="cta">
+            <a class="btn primary" href="#contato">Entrar em contato</a>
+            <a class="btn" href="#projetos">Ver projetos</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img id="profilePhoto" src="assets/perfil.jpeg" alt="Foto de Eduardo Alves" />
+        </div>
+      </section>
+
+      <section id="sobre" class="section container">
+        <h2>Sobre</h2>
+        <p id="sobreText">
+          Carregando...
+        </p>
+        <ul class="badges" id="skillsBadges"></ul>
+      </section>
+
+      <section id="experiencia" class="section container">
+        <h2>Experiência</h2>
+        <div id="expTimeline" class="timeline"></div>
+      </section>
+
+      <section id="projetos" class="section container">
+        <h2>Projetos e Imagens</h2>
+        <div id="gallery" class="gallery"></div>
+      </section>
+
+      <section id="contato" class="section container">
+        <h2>Contato</h2>
+        <div class="contact-grid" id="contactLinks"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Eduardo Alves. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
