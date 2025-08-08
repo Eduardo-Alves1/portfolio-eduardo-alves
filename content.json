@@ -1,6 +1,6 @@
 {
   "hero": {
-    "photo": "assets/perfil.jpg"
+    "photo": "assets/perfil.jpeg"
   },
   "sobre": {
     "texto": "Profissional de QA com foco em automação de testes, qualidade de software e melhoria contínua. Experiência com pipelines CI/CD, testes E2E e testes de API.",
