@@ -3,6 +3,31 @@
   const $ = (sel) => document.querySelector(sel);
   const byId = (id) => document.getElementById(id);
 
+  // Helpers
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+  function renderIcon(val) {
+    if (!val) return '<span>🔗</span>';
+    const s = String(val).trim();
+    // Se for um nome de ícone (ex.: "envelope" ou "bi-envelope"), usamos Bootstrap Icons
+    const looksLikeBiName = s.startsWith('bi-') || s.startsWith('bi ')
+      || /^[a-z0-9-]+$/i.test(s);
+    if (looksLikeBiName) {
+      const cls = s.startsWith('bi-') || s.startsWith('bi ')
+        ? s
+        : `bi-${s}`;
+      return `<i class="bi ${cls}" aria-hidden="true"></i>`;
+    }
+    // Caso contrário tratamos como emoji/texto literal
+    return `<span>${escapeHtml(s)}</span>`;
+  }
+
   // Tema salvo
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
@@ -66,8 +91,9 @@
       const root = byId('contactLinks');
       root.innerHTML = data.contatos.map(c => `
         <div class="contact">
-          <span>${c.icone || '🔗'}</span>
+          ${renderIcon(c.icone)}
           <a href="${c.url}" target="_blank" rel="noopener">${c.label}</a>
+          
         </div>
       `).join('');
     }
