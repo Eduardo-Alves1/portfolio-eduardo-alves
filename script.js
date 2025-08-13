@@ -115,6 +115,23 @@
         </div>
       `).join('');
     }
+
+    document.getElementById('contactLinks').addEventListener('click', function(event) {
+      const link = event.target.closest('a');
+      if (link) {
+        const label = link.textContent.trim();
+        const url = link.href;
+    
+        // Dispara evento no GA4
+        gtag('event', 'clique_contato', {
+          tipo: label,  // Ex: "E-mail", "LinkedIn"
+          link: url     // Ex: "https://linkedin.com/in/..."
+        });
+    
+        console.log(`Evento GA4 enviado: ${label} -> ${url}`);
+      }
+    });
+    
   } catch (e) {
     console.error('Falha ao carregar content.json', e);
     byId('sobreText').textContent = 'Bem-vindo! Edite o arquivo content.json para personalizar seu portfólio.';
