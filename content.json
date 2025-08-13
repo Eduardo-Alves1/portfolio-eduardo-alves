@@ -4,7 +4,7 @@
   },
   "sobre": {
     "texto": "Profissional de QA com foco em automação de testes, qualidade de software e melhoria contínua. Experiência com pipelines CI/CD, testes E2E e testes de API.",
-    "skills": ["QA", "Testes Manuais","Testes Automatizados", "Cypress", "Playwright", "Selenium", "Postman", "Jest", "Git", "CI/CD"]
+    "skills": ["QA", "Testes Manuais","Testes Automatizados", "Cypress", "Playwright", "Selenium","Robot Framework", "Postman", "Jest", "Git", "CI/CD", "Python", "Java", "JavaScript", "SQL", "HTML", "CSS"]
   },
   "experiencia": [
     {
@@ -30,23 +30,36 @@
       "fim": "Jun/2025",
       "local": "São Paulo, SP",
       "responsabilidades": [
-        " Teste de Software - No sistema de gestão de frotas, quando era liberada Features novas. Atuando com Testes Manuais.",
-        "Em minhas funções algumas delas repetitivas, realizava automação de tarefas,utilizando, Python, Selenium.",
+        "Teste de Software - No sistema de gestão de frotas, quando eram liberadas novas features. Atuando com testes manuais.",
+        "Em minhas funções, algumas delas repetitivas, realizava automação de tarefas utilizando Python e Selenium.",
         "Gerenciamento de carteira de clientes B2B, garantindo engajamento e sucesso contínuo com as soluções oferecidas.",
         "Realização de reuniões estratégicas com stakeholders para análise de performance, KPIs e alinhamento de objetivos.",
         "Análise de dados e indicadores de uso da plataforma, propondo melhorias com base em insights estratégicos.",
         "Desenvolvimento de treinamentos personalizados para capacitação dos usuários finais."
       ],
-      "stack": ["Python", "Selenium", "Pyathogui"]
+      "stack": ["Python", "Selenium", "PyAutoGUI"]
+    }
+  ],
+  
+  "squads": [
+    {
+      "squad": "Squad Onboarding",
+      "projeto": "Plataforma de Qualidade",
+      "descricao": "Atuei definindo critérios de aceite, escrevendo cenários BDD e automatizando fluxos críticos E2E, integrando a suíte ao pipeline CI."
+    },
+    {
+      "squad": "Squad Rastreamento",
+      "projeto": "Portal do Cliente",
+      "descricao": "Conduzi testes manuais exploratórios e automação de regressão com Selenium, colaborando com devs para reduzir bugs em produção."
     }
   ],
   "projetos": [
     { "titulo": "Suite E2E com Cypress", "imagem": "assets/cypress.png","link": "#" },
-    { "titulo": "Teste de API com Postman", "imagem": "assets/projeto2.jpg", "link": "#" },
+    { "titulo": "Teste de API com Postman", "imagem": "assets/POSTMAN.png", "link": "#" },
     { "titulo": "Automação de Regressão", "imagem": "assets/projeto3.jpg" }
   ],
   "contatos": [
-    { "label": "E-mail", "url": "eduardo.santos.alves14@gmail.com", "icone": "bi-envelope-at-fill" },
+    { "label": "E-mail", "url": "mailto:eduardo.santos.alves14@gmail.com", "icone": "bi-envelope-at-fill" },
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/eduardo-alves-124320b9/", "icone": "bi-linkedin" },
     { "label": "GitHub", "url": "https://github.com/Eduardo-Alves1", "icone": "bi-github" },
     { "label": "WhatsApp", "url": "https://api.whatsapp.com/send?phone=5511945968957", "icone": "bi-whatsapp" }

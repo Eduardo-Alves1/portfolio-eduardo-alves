@@ -10,8 +10,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Metadados de cor/tema -->
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0f1221" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f7f9fc" media="(prefers-color-scheme: light)">
+
+    <!-- SEO/OG/Twitter -->
+    <link rel="canonical" href="https://www.dtem.pro">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfólio • Eduardo Alves • QA">
+    <meta property="og:description" content="Portfólio de Eduardo Alves, Quality Assurance (QA).">
+    <meta property="og:image" content="assets/perfil.jpeg">
+    <meta property="og:url" content="https://www.dtem.pro">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/perfil.jpeg">
+
+    <!-- Schema.org Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Eduardo Alves",
+      "jobTitle": "Quality Assurance Engineer",
+      "url": "https://www.dtem.pro",
+      "image": "assets/perfil.jpeg",
+      "sameAs": [
+        "https://www.linkedin.com/in/eduardo-alves-124320b9/",
+        "https://github.com/Eduardo-Alves1"
+      ]
+    }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#top">Pular para conteúdo</a>
     <header class="site-header">
       <div class="container">
         <a class="brand" href="#top">Eduardo Alves <span class="role">QA</span></a>
@@ -36,7 +70,7 @@
           </div>
         </div>
         <div class="hero-image">
-          <img id="profilePhoto" src="assets/perfil.jpeg" alt="Foto de Eduardo Alves" />
+          <img id="profilePhoto" src="assets/perfil.jpeg" alt="Foto de Eduardo Alves" width="220" height="220" loading="lazy" />
         </div>
       </section>
 
@@ -51,6 +85,11 @@
       <section id="experiencia" class="section container">
         <h2>Experiência</h2>
         <div id="expTimeline" class="timeline"></div>
+      </section>
+
+      <section id="squads" class="section container">
+        <h2>Experiência em Squads</h2>
+        <div id="squadsList" class="timeline"></div>
       </section>
 
       <section id="projetos" class="section container">

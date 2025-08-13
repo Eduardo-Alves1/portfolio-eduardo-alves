@@ -36,10 +36,16 @@
     document.documentElement.setAttribute('data-theme', 'light');
   }
 
-  byId('themeToggle').addEventListener('click', () => {
+  const themeToggleEl = byId('themeToggle');
+  // refletir estado atual no aria-pressed
+  themeToggleEl.setAttribute('aria-pressed', document.documentElement.getAttribute('data-theme') === 'light' ? 'true' : 'false');
+
+  themeToggleEl.addEventListener('click', () => {
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    document.documentElement.setAttribute('data-theme', isLight ? '' : 'light');
-    localStorage.setItem('theme', isLight ? 'dark' : 'light');
+    const nextIsLight = !isLight;
+    document.documentElement.setAttribute('data-theme', nextIsLight ? 'light' : '');
+    localStorage.setItem('theme', nextIsLight ? 'light' : 'dark');
+    themeToggleEl.setAttribute('aria-pressed', nextIsLight ? 'true' : 'false');
   });
 
   byId('year').textContent = new Date().getFullYear();
@@ -71,6 +77,18 @@
           <div class="meta">${exp.inicio} – ${exp.fim || 'Atual'} • ${exp.local || ''}</div>
           ${Array.isArray(exp.responsabilidades) ? `<ul>${exp.responsabilidades.map(r => `<li>${r}</li>`).join('')}</ul>` : ''}
           ${exp.stack ? `<div class="meta">Stack: ${exp.stack.join(', ')}</div>` : ''}
+        </article>
+      `).join('');
+    }
+
+  
+    // Squads
+    if (Array.isArray(data.squads)) {
+      const root = byId('squadsList');
+      root.innerHTML = data.squads.map(sq => `
+        <article class="card">
+          <h3>${sq.squad || ''} ${sq.projeto ? `• ${sq.projeto}` : ''}</h3>
+          ${sq.descricao ? `<p class="meta">${sq.descricao}</p>` : ''}
         </article>
       `).join('');
     }

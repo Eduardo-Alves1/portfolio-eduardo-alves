@@ -84,7 +84,7 @@ body {
 
 .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
 .tile { position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); }
-.tile img { width: 100%; height: 180px; object-fit: center; display: block; }
+.tile img { width: 100%; height: 180px; object-fit: cover; object-position: center; display: block; }
 .tile .tile-caption { padding: 10px; font-size: 14px; color: var(--muted); }
 
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
@@ -99,5 +99,28 @@ body {
   .hero { grid-template-columns: 1fr; }
   .hero-image { order: -1; }
   .hero-image img { width: 160px; height: 160px; }
+}
+
+/* Acessibilidade: foco visível */
+.nav a:focus-visible, .nav button:focus-visible, .btn:focus-visible, .contact a:focus-visible, .brand:focus-visible, .skip-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Link de pulo para conteúdo */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: var(--surface);
+  color: var(--fg);
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 8px;
 }
 
