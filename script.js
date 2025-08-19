@@ -122,6 +122,19 @@
       `).join('');
     }
 
+    // CV (download opcional via content.json)
+    const cvBtn = document.getElementById('cvDownload');
+    if (data.cv?.url && cvBtn) {
+      cvBtn.href = data.cv.url;
+      if (data.cv.nome) cvBtn.setAttribute('download', data.cv.nome);
+      cvBtn.style.display = 'inline-block';
+      cvBtn.addEventListener('click', function() {
+        const url = this.href;
+        try { gtag('event', 'download_cv', { link: url }); } catch (e) {}
+        console.log(`Evento GA4 enviado: download CV -> ${url}`);
+      });
+    }
+
     // Curso (opcional via content.json)
     if (data.curso) {
       if (data.curso.descricao) byId('cursoDescricao').textContent = data.curso.descricao;

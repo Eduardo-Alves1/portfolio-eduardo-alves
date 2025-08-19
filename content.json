@@ -64,6 +64,10 @@
     { "label": "LinkedIn", "url": "https://www.linkedin.com/in/eduardo-alves-124320b9/", "icone": "bi-linkedin" },
     { "label": "GitHub", "url": "https://github.com/Eduardo-Alves1", "icone": "bi-github" },
     { "label": "WhatsApp", "url": "https://api.whatsapp.com/send?phone=5511945968957", "icone": "bi-whatsapp" }
-  ]
+  ],
+  "cv": {
+    "url": "assets/cv.pdf",
+    "nome": "Eduardo_Alves_CV.pdf"
+  }
 }
 
