@@ -116,6 +116,29 @@
       `).join('');
     }
 
+    // Curso (opcional via content.json)
+    if (data.curso) {
+      if (data.curso.descricao) byId('cursoDescricao').textContent = data.curso.descricao;
+
+      // Link do curso (botão e banner)
+      const linkEl = byId('cursoLink');
+      const bannerLinkEl = byId('cursoBannerLink');
+      if (data.curso.url) {
+        linkEl.href = data.curso.url;
+        if (bannerLinkEl) bannerLinkEl.href = data.curso.url;
+      }
+      if (data.curso.titulo) linkEl.textContent = data.curso.titulo;
+
+      // Banner do curso
+      const bannerImg = byId('cursoBanner');
+      if (bannerImg && data.curso.banner) {
+        bannerImg.src = data.curso.banner;
+        if (data.curso.bannerAlt) bannerImg.alt = data.curso.bannerAlt;
+        bannerImg.style.display = 'block';
+      }
+    }
+
+    // GA4 - clicks em Contatos
     document.getElementById('contactLinks').addEventListener('click', function(event) {
       const link = event.target.closest('a');
       if (link) {
@@ -131,6 +154,24 @@
         console.log(`Evento GA4 enviado: ${label} -> ${url}`);
       }
     });
+
+    // GA4 - click no Curso (botão e banner)
+    const cursoLinkEl = document.getElementById('cursoLink');
+    if (cursoLinkEl) {
+      cursoLinkEl.addEventListener('click', function() {
+        const url = this.href;
+        gtag('event', 'clique_curso', { link: url, origem: 'botao' });
+        console.log(`Evento GA4 enviado: curso (botao) -> ${url}`);
+      });
+    }
+    const cursoBannerLinkEl = document.getElementById('cursoBannerLink');
+    if (cursoBannerLinkEl) {
+      cursoBannerLinkEl.addEventListener('click', function() {
+        const url = this.href;
+        gtag('event', 'clique_curso', { link: url, origem: 'banner' });
+        console.log(`Evento GA4 enviado: curso (banner) -> ${url}`);
+      });
+    }
     
   } catch (e) {
     console.error('Falha ao carregar content.json', e);
