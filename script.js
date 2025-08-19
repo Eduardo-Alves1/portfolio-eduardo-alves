@@ -99,7 +99,13 @@
       root.innerHTML = data.projetos.map(p => `
         <figure class="tile">
           <img src="${p.imagem}" alt="${p.titulo || 'Imagem do projeto'}" loading="lazy" onerror="this.style.display='none'"/>
-          <figcaption class="tile-caption">${p.titulo || ''} ${p.link ? `• <a href='${p.link}' target='_blank' rel='noopener'>Ver</a>` : ''}</figcaption>
+          <figcaption class="tile-caption">
+            <div class="tile-row">
+              <span class="tile-title">${p.titulo || ''}</span>
+              ${p.link ? `\u003ca class='btn primary small' href='${p.link}' target='_blank' rel='noopener' aria-label='Ver projeto: ${p.titulo || 'projeto'}'\u003eVer\u003c/a\u003e` : ''}
+
+            </div>
+          </figcaption>
         </figure>
       `).join('');
     }

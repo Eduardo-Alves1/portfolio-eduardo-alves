@@ -66,7 +66,7 @@ body {
 .hero h1 { font-size: 44px; margin: 0 0 8px; }
 .subtitle { color: var(--muted); margin: 0 0 16px; }
 .cta { display: flex; gap: 12px; margin-top: 8px; }
-.btn { padding: 10px 16px; border-radius: 10px; border: 1px solid var(--border); color: var(--fg); text-decoration: none; background: var(--surface); }
+.btn { padding: 10px 16px; border-radius: 10px; border: 1px solid var(--border); color: var(--fg); text-decoration: none; background: var(--surface); display: inline-block; line-height: 1; }
 .btn.primary { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #0b0f1d; font-weight: 700; border: none; }
 .hero-image img { width: 220px; height: 220px; object-fit: cover; border-radius: 16px; border: 1px solid var(--border); box-shadow: var(--shadow); }
 
@@ -86,6 +86,8 @@ body {
 .tile { position: relative; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); }
 .tile img { width: 100%; height: 180px; object-fit: cover; object-position: center; display: block; }
 .tile .tile-caption { padding: 10px; font-size: 14px; color: var(--muted); }
+.tile .tile-caption .tile-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.tile .tile-caption .tile-title { color: var(--muted); }
 
 .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
 .contact {
@@ -94,6 +96,8 @@ body {
 .contact a { color: var(--fg); text-decoration: none; }
 
 .site-footer { border-top: 1px solid var(--border); padding: 24px 0; color: var(--muted); }
+
+.btn.small { padding: 6px 10px; font-size: 13px; border-radius: 8px; }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; }

@@ -39,7 +39,7 @@
       ],
       "stack": ["Python", "Selenium", "PyAutoGUI"]
     }
-  ],
+  ],  
   
   "squads": [
     {
@@ -54,9 +54,9 @@
     }
   ],
   "projetos": [
-    { "titulo": "Suite E2E com Cypress", "imagem": "assets/cypress.png","link": "#" },
+    { "titulo": "Suite E2E com Cypress", "imagem": "assets/cypreslogo.jpg","link": "https://github.com/Eduardo-Alves1/E2EPLATAFORMA" },
     { "titulo": "Teste de API com Postman", "imagem": "assets/POSTMAN.png", "link": "#" },
-    { "titulo": "Automação de Regressão", "imagem": "assets/projeto3.jpg" }
+    { "titulo": "Em desenvolvimento!", "imagem": "assets/pagina_em.png" }
   ],
   "contatos": [
     { "label": "E-mail", "url": "mailto:eduardo.santos.alves14@gmail.com", "icone": "bi-envelope-at-fill" },
