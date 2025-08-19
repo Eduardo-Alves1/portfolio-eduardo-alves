@@ -14,12 +14,13 @@
       "fim": "Atual",
       "local": "Remoto",
       "responsabilidades": [
-        "Jira – Gestão de tarefas",
-        "Selenium WebDriver – Automação de testes",
-        "Postman – Testes de APIs REST",
+        "Integro práticas de QA aos processos ágeis (Scrum/Kanban), com foco em melhoria contínua",
+        "Conduzo testes manuais e automatizados, garantindo cobertura funcional e estabilidade do sistema",
+        "Crio e documento casos de teste claros e objetivos",
         "Slack – Comunicação com squads",
         "Visual Studio Code – Desenvolvimento e versionamento de scripts",
-        "Aqua – Desenvolvimento e versionamento de Scripts de testes"
+        "Realizo testes exploratórios e de regressão com foco na identificação precoce de falhas",
+        "Registro, acompanho e colaboro na resolução de defeitos usando ferramentas de gestão de incidentes"
       ],
       "stack": ["Cypress", "GitHub Actions", "TypeScript", "Selenium", "Java", "JUnit"]
     },
