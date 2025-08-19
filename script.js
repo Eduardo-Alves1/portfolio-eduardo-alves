@@ -48,11 +48,71 @@
     themeToggleEl.setAttribute('aria-pressed', nextIsLight ? 'true' : 'false');
   });
 
+  // Idioma salvo
+  const savedLang = localStorage.getItem('lang') || 'pt';
+  let currentLang = savedLang;
+  const langToggle = byId('langToggle');
+  if (langToggle) langToggle.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+
   byId('year').textContent = new Date().getFullYear();
 
+  async function loadContent(lang) {
+    const file = lang === 'en' ? 'content.en.json' : 'content.json';
+    const res = await fetch(file, { cache: 'no-store' });
+    return res.json();
+  }
+
+  function translateStatic(lang) {
+    // navbar
+    const nav = document.querySelector('.nav');
+    if (nav) {
+      const links = nav.querySelectorAll('a[href^="#"]');
+      links.forEach((a) => {
+        const href = a.getAttribute('href');
+        if (lang === 'en') {
+          if (href === '#sobre') a.textContent = 'About';
+          if (href === '#experiencia') a.textContent = 'Experience';
+          if (href === '#projetos') a.textContent = 'Projects';
+          if (href === '#curso') a.textContent = 'Course';
+          if (href === '#contato') a.textContent = 'Contact';
+        } else {
+          if (href === '#sobre') a.textContent = 'Sobre';
+          if (href === '#experiencia') a.textContent = 'Experiência';
+          if (href === '#projetos') a.textContent = 'Projetos';
+          if (href === '#curso') a.textContent = 'Curso';
+          if (href === '#contato') a.textContent = 'Contato';
+        }
+      });
+    }
+    // títulos de seção
+    document.querySelector('#sobre h2').textContent = lang === 'en' ? 'About' : 'Sobre';
+    document.querySelector('#experiencia h2').textContent = lang === 'en' ? 'Experience' : 'Experiência';
+    document.querySelector('#squads h2').textContent = lang === 'en' ? 'Squad Experience' : 'Experiência em Squads';
+    document.querySelector('#projetos h2').textContent = lang === 'en' ? 'Projects and Images' : 'Projetos e Imagens';
+    document.querySelector('#curso h2').textContent = lang === 'en' ? 'Computer Course' : 'Curso de Informática';
+    document.querySelector('#contato h2').textContent = lang === 'en' ? 'Contact' : 'Contato';
+    // hero CTA
+    const contactBtn = document.querySelector('.cta a[href="#contato"]');
+    if (contactBtn) contactBtn.textContent = lang === 'en' ? 'Get in touch' : 'Entrar em contato';
+    const seeProjects = Array.from(document.querySelectorAll('.cta a')).find(a => a.getAttribute('href') === '#projetos');
+    if (seeProjects) seeProjects.textContent = lang === 'en' ? 'See projects' : 'Ver projetos';
+    const cvBtn = document.getElementById('cvDownload');
+    if (cvBtn) cvBtn.textContent = lang === 'en' ? 'Download CV' : 'Baixar CV';
+    // curso botão
+    const cursoBtn = document.getElementById('cursoLink');
+    if (cursoBtn) cursoBtn.textContent = lang === 'en' ? 'Access the course' : 'Acessar o curso';
+    // rodapé
+    const footerP = document.querySelector('.site-footer p');
+    if (footerP) footerP.innerHTML = (lang === 'en'
+      ? '© <span id="year"></span> Eduardo Alves. All rights reserved.'
+      : '© <span id="year"></span> Eduardo Alves. Todos os direitos reservados.');
+    byId('year').textContent = new Date().getFullYear();
+  }
+
   try {
-    const res = await fetch('content.json', { cache: 'no-store' });
-    const data = await res.json();
+    const data = await loadContent(currentLang);
+
+    translateStatic(currentLang);
 
     // Hero
     if (data.hero?.photo) {
@@ -102,7 +162,7 @@
           <figcaption class="tile-caption">
             <div class="tile-row">
               <span class="tile-title">${p.titulo || ''}</span>
-              ${p.link ? `\u003ca class='btn primary small' href='${p.link}' target='_blank' rel='noopener' aria-label='Ver projeto: ${p.titulo || 'projeto'}'\u003eVer\u003c/a\u003e` : ''}
+              ${p.link ? `\u003ca class='btn primary small' href='${p.link}' target='_blank' rel='noopener' aria-label='${currentLang === 'en' ? 'View project' : 'Ver projeto'}: ${p.titulo || (currentLang === 'en' ? 'project' : 'projeto')}'\u003e${currentLang === 'en' ? 'View' : 'Ver'}\u003c/a\u003e` : ''}
 
             </div>
           </figcaption>
@@ -179,8 +239,8 @@
     if (cursoLinkEl) {
       cursoLinkEl.addEventListener('click', function() {
         const url = this.href;
-        gtag('event', 'clique_curso', { link: url, origem: 'botao' });
-        console.log(`Evento GA4 enviado: curso (botao) -> ${url}`);
+        gtag('event', 'clique_curso', { link: url, origem: currentLang === 'en' ? 'button' : 'botao' });
+        console.log(`Evento GA4 enviado: curso (${currentLang === 'en' ? 'button' : 'botao'}) -\u003e ${url}`);
       });
     }
     const cursoBannerLinkEl = document.getElementById('cursoBannerLink');
@@ -188,7 +248,73 @@
       cursoBannerLinkEl.addEventListener('click', function() {
         const url = this.href;
         gtag('event', 'clique_curso', { link: url, origem: 'banner' });
-        console.log(`Evento GA4 enviado: curso (banner) -> ${url}`);
+        console.log(`Evento GA4 enviado: curso (banner) -\u003e ${url}`);
+      });
+    }
+
+    // Toggle de idioma
+    if (langToggle) {
+      langToggle.addEventListener('click', async () => {
+        currentLang = currentLang === 'pt' ? 'en' : 'pt';
+        localStorage.setItem('lang', currentLang);
+        langToggle.textContent = currentLang === 'pt' ? 'EN' : 'PT';
+        // Recarregar dados e re-renderizar seções dinâmicas
+        const data = await loadContent(currentLang);
+        translateStatic(currentLang);
+        // Re-renderizar seções com base no novo idioma
+        // Sobre
+        if (data.sobre?.texto) byId('sobreText').textContent = data.sobre.texto;
+        if (Array.isArray(data.sobre?.skills)) {
+          const ul = byId('skillsBadges');
+          ul.innerHTML = data.sobre.skills.map(s => `\u003cli\u003e${s}\u003c/li\u003e`).join('');
+        }
+        // Experiência
+        if (Array.isArray(data.experiencia)) {
+          const root = byId('expTimeline');
+          root.innerHTML = data.experiencia.map(exp => `
+            \u003carticle class=\"card\"\u003e
+              \u003ch3\u003e${exp.cargo} • ${exp.empresa}\u003c/h3\u003e
+              \u003cdiv class=\"meta\"\u003e${exp.inicio} – ${exp.fim || (currentLang === 'en' ? 'Present' : 'Atual')} • ${exp.local || ''}\u003c/div\u003e
+              ${Array.isArray(exp.responsabilidades) ? `\u003cul\u003e${exp.responsabilidades.map(r => `\u003cli\u003e${r}\u003c/li\u003e`).join('')}\u003c/ul\u003e` : ''}
+              ${exp.stack ? `\u003cdiv class=\"meta\"\u003eStack: ${exp.stack.join(', ')}\u003c/div\u003e` : ''}
+            \u003c/article\u003e
+          `).join('');
+        }
+        // Squads
+        if (Array.isArray(data.squads)) {
+          const root = byId('squadsList');
+          root.innerHTML = data.squads.map(sq => `
+            \u003carticle class=\"card\"\u003e
+              \u003ch3\u003e${sq.squad || ''} ${sq.projeto ? `• ${sq.projeto}` : ''}\u003c/h3\u003e
+              ${sq.descricao ? `\u003cp class=\"meta\"\u003e${sq.descricao}\u003c/p\u003e` : ''}
+            \u003c/article\u003e
+          `).join('');
+        }
+        // Projetos
+        if (Array.isArray(data.projetos)) {
+          const root = byId('gallery');
+          root.innerHTML = data.projetos.map(p => `
+            \u003cfigure class=\"tile\"\u003e
+              \u003cimg src=\"${p.imagem}\" alt=\"${p.titulo || (currentLang === 'en' ? 'Project image' : 'Imagem do projeto')}\" loading=\"lazy\" onerror=\"this.style.display='none'\"/\u003e
+              \u003cfigcaption class=\"tile-caption\"\u003e
+                \u003cdiv class=\"tile-row\"\u003e
+                  \u003cspan class=\"tile-title\"\u003e${p.titulo || ''}\u003c/span\u003e
+                  ${p.link ? `\u003ca class='btn primary small' href='${p.link}' target='_blank' rel='noopener' aria-label='${currentLang === 'en' ? 'View project' : 'Ver projeto'}: ${p.titulo || (currentLang === 'en' ? 'project' : 'projeto')}'\u003e${currentLang === 'en' ? 'View' : 'Ver'}\u003c/a\u003e` : ''}
+                \u003c/div\u003e
+              \u003c/figcaption\u003e
+            \u003c/figure\u003e
+          `).join('');
+        }
+        // Contatos
+        if (Array.isArray(data.contatos)) {
+          const root = byId('contactLinks');
+          root.innerHTML = data.contatos.map(c => `
+            \u003cdiv class=\"contact\"\u003e
+              ${renderIcon(c.icone)}
+              \u003ca href=\"${c.url}\" target=\"_blank\" rel=\"noopener\"\u003e${c.label}\u003c/a\u003e
+            \u003c/div\u003e
+          `).join('');
+        }
       });
     }
     
