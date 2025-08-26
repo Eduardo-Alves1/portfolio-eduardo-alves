@@ -62,11 +62,11 @@
     <div class="container">
       <a class="brand" href="#top">Eduardo Alves <span class="role">QA</span></a>
       <nav class="nav">
-        <a href="#sobre">Sobre</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#curso">Curso</a>
-        <a href="#contato">Contato</a>
+        <a href="#sobre" data-pt="Sobre" data-en="About">Sobre</a>
+        <a href="#experiencia" data-pt="Experiência" data-en="Experience">Experiência</a>
+        <a href="#projetos" data-pt="Projetos" data-en="Projects">Projetos</a>
+        <a href="#curso" data-pt="Curso" data-en="Course">Curso</a>
+        <a href="#contato" data-pt="Contato" data-en="Contact">Contato</a>
         <button id="langToggle" aria-label="Switch language">EN</button>
         <button id="themeToggle" aria-label="Alternar tema">🌓</button>
       </nav>
@@ -77,11 +77,11 @@
     <section class="hero container">
       <div class="hero-text">
         <h1>Eduardo Alves</h1>
-        <p class="subtitle">Quality Assurance • Testes Automatizados • Melhoria Contínua</p>
+        <p class="subtitle" data-pt="Quality Assurance • Testes Automatizados • Melhoria Contínua" data-en="Quality Assurance • Test Automation • Continuous Improvement">Quality Assurance • Testes Automatizados • Melhoria Contínua</p>
         <div class="cta">
-          <a class="btn primary" href="#contato">Entrar em contato</a>
-          <a class="btn" href="#projetos">Ver projetos</a>
-          <a id="cvDownload" class="btn primary" href="#" download style="display:none" aria-label="Baixar currículo (PDF)">Baixar CV</a>
+          <a class="btn primary" href="#contato" data-pt="Entrar em contato" data-en="Get in touch">Entrar em contato</a>
+          <a class="btn" href="#projetos" data-pt="Ver projetos" data-en="See projects">Ver projetos</a>
+          <a id="cvDownload" class="btn primary" href="assets/cv.pdf" download="Eduardo_Alves_CV.pdf" aria-label="Baixar currículo (PDF)">Baixar CV</a>
         </div>
       </div>
       <div class="hero-image">
@@ -91,57 +91,155 @@
     </section>
 
     <section id="sobre" class="section container">
-      <h2>Sobre</h2>
-      <p id="sobreText">
-        Carregando...
+      <h2 data-pt="Sobre" data-en="About">Sobre</h2>
+      <p id="sobreText" data-pt="Profissional de QA com foco em automação de testes, qualidade de software e melhoria contínua. Experiência com pipelines CI/CD, testes E2E e testes de API." data-en="QA professional focused on test automation, software quality and continuous improvement. Experience with CI/CD pipelines, E2E testing and API testing.">
+        Profissional de QA com foco em automação de testes, qualidade de software e melhoria contínua. Experiência com pipelines CI/CD, testes E2E e testes de API.
       </p>
-      <ul class="badges" id="skillsBadges"></ul>
+      <ul class="badges" id="skillsBadges">
+        <li>QA</li>
+        <li>Testes Manuais</li>
+        <li>Testes Automatizados</li>
+        <li>Cypress</li>
+        <li>Playwright</li>
+        <li>Selenium</li>
+        <li>Robot Framework</li>
+        <li>Postman</li>
+        <li>Jest</li>
+        <li>Git</li>
+        <li>CI/CD</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>SQL</li>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
     </section>
 
     <section id="experiencia" class="section container">
-      <h2>Experiência</h2>
-      <div id="expTimeline" class="timeline"></div>
+      <h2 data-pt="Experiência" data-en="Experience">Experiência</h2>
+      <div id="expTimeline" class="timeline">
+        <article class="card">
+          <h3>QA Engineer • E2E Coders</h3>
+          <div class="meta" data-pt="Jan/2024 – Atual • Remoto" data-en="Jan/2025 – Present • Remote">Jan/2025 – Atual • Remoto</div>
+          <ul>
+            <li data-pt="Integro práticas de QA aos processos ágeis (Scrum/Kanban), com foco em melhoria contínua" data-en="I integrate QA practices into agile processes (Scrum/Kanban) with a focus on continuous improvement">Integro práticas de QA aos processos ágeis (Scrum/Kanban), com foco em melhoria contínua</li>
+            <li data-pt="Conduzo testes manuais e automatizados, garantindo cobertura funcional e estabilidade do sistema" data-en="I conduct manual and automated tests, ensuring functional coverage and system stability">Conduzo testes manuais e automatizados, garantindo cobertura funcional e estabilidade do sistema</li>
+            <li data-pt="Crio e documento casos de teste claros e objetivos" data-en="I create and document clear and objective test cases">Crio e documento casos de teste claros e objetivos</li>
+            <li>Slack – Comunicação com squads</li>
+            <li>Visual Studio Code – Desenvolvimento e versionamento de scripts</li>
+            <li data-pt="Realizo testes exploratórios e de regressão com foco na identificação precoce de falhas" data-en="I perform exploratory and regression testing to identify issues early">Realizo testes exploratórios e de regressão com foco na identificação precoce de falhas</li>
+            <li data-pt="Registro, acompanho e colaboro na resolução de defeitos usando ferramentas de gestão de incidentes" data-en="I log, track and collaborate on resolving defects using incident management tools">Registro, acompanho e colaboro na resolução de defeitos usando ferramentas de gestão de incidentes</li>
+          </ul>
+          <div class="meta">Stack: Cypress, GitHub Actions, TypeScript, Selenium, Java, JUnit</div>
+        </article>
+        
+        <article class="card">
+          <h3>Customer Success Specialist • Ituran Brasil</h3>
+          <div class="meta">Out/2014 – Jun/2025 • São Paulo, SP</div>
+          <ul>
+            <li data-pt="Teste de Software - No sistema de gestão de frotas, quando eram liberadas novas features. Atuando com testes manuais, validações dos dados gerados." data-en="Software Testing - In the fleet management system, when new features were released. Performing manual tests.">Teste de Software - No sistema de gestão de frotas, quando eram liberadas novas features. Atuando com testes manuais, validações dos dados gerados.</li>
+            <li data-pt="Em minhas funções, algumas delas repetitivas, realizava automação de tarefas utilizando Python e Selenium." data-en="In my role, some tasks were repetitive, so I automated them using Python and Selenium.">Em minhas funções, algumas delas repetitivas, realizava automação de tarefas utilizando Python e Selenium.</li>
+            <li data-pt="Gerenciamento de carteira de clientes B2B, garantindo engajamento e sucesso contínuo com as soluções oferecidas." data-en="Managed a B2B customer portfolio, ensuring engagement and continuous success with the solutions offered.">Gerenciamento de carteira de clientes B2B, garantindo engajamento e sucesso contínuo com as soluções oferecidas.</li>
+            <li data-pt="Realização de reuniões estratégicas com stakeholders para análise de performance, KPIs e alinhamento de objetivos." data-en="Held strategic meetings with stakeholders to analyze performance, KPIs and align objectives.">Realização de reuniões estratégicas com stakeholders para análise de performance, KPIs e alinhamento de objetivos.</li>
+            <li data-pt="Análise de dados e indicadores de uso da plataforma, propondo melhorias com base em insights estratégicos." data-en="Analyzed platform usage data and indicators, proposing improvements based on strategic insights.">Análise de dados e indicadores de uso da plataforma, propondo melhorias com base em insights estratégicos.</li>
+            <li data-pt="Desenvolvimento de treinamentos personalizados para capacitação dos usuários finais." data-en="Developed customized training to empower end users.">Desenvolvimento de treinamentos personalizados para capacitação dos usuários finais.</li>
+          </ul>
+          <div class="meta">Stack: Python, Selenium, PyAutoGUI</div>
+        </article>
+      </div>
     </section>
 
     <section id="squads" class="section container">
-      <h2>Experiência em Squads</h2>
-      <div id="squadsList" class="timeline"></div>
+      <h2 data-pt="Experiência em Squads" data-en="Squad Experience">Experiência em Squads</h2>
+      <div id="squadsList" class="timeline">
+        <article class="card">
+          <h3 data-pt="Squad Onboarding • Plataforma de Qualidade" data-en="Onboarding Squad • Quality Platform">Squad Onboarding • Plataforma de Qualidade</h3>
+          <p class="meta" data-pt="Atuei definindo critérios de aceite, escrevendo cenários BDD e automatizando fluxos críticos E2E, integrando a suíte ao pipeline CI." data-en="Defined acceptance criteria, wrote BDD scenarios and automated critical E2E flows, integrating the suite into the CI pipeline.">Atuei definindo critérios de aceite, escrevendo cenários BDD e automatizando fluxos críticos E2E, integrando a suíte ao pipeline CI.</p>
+        </article>
+        
+        <article class="card">
+          <h3 data-pt="Squad Rastreamento • Portal do Cliente" data-en="Tracking Squad • Customer Portal">Squad Rastreamento • Portal do Cliente</h3>
+          <p class="meta" data-pt="Conduzi testes manuais exploratórios e automação de regressão com Selenium, colaborando com devs para reduzir bugs em produção." data-en="Conducted exploratory manual tests and regression automation with Selenium, collaborating with devs to reduce production bugs.">Conduzi testes manuais exploratórios e automação de regressão com Selenium, colaborando com devs para reduzir bugs em produção.</p>
+        </article>
+      </div>
     </section>
 
     <section id="projetos" class="section container">
-      <h2>Projetos e Imagens</h2>
-      <div id="gallery" class="gallery"></div>
+      <h2 data-pt="Projetos e Imagens" data-en="Projects and Images">Projetos e Imagens</h2>
+      <div id="gallery" class="gallery">
+        <figure class="tile">
+          <img src="assets/cypreslogo.jpg" alt="Suite E2E com Cypress" loading="lazy" />
+          <figcaption class="tile-caption">
+            <div class="tile-row">
+              <span class="tile-title" data-pt="Suite E2E com Cypress" data-en="E2E Suite with Cypress">Suite E2E com Cypress</span>
+              <a class="btn primary small" href="https://github.com/Eduardo-Alves1/E2EPLATAFORMA" target="_blank" rel="noopener" aria-label="Ver projeto: Suite E2E com Cypress" data-pt="Ver" data-en="View">Ver</a>
+            </div>
+          </figcaption>
+        </figure>
+        
+        <figure class="tile">
+          <img src="assets/POSTMAN.png" alt="Teste de API com Postman" loading="lazy" />
+          <figcaption class="tile-caption">
+            <div class="tile-row">
+              <span class="tile-title" data-pt="Teste de API com Postman" data-en="API Testing with Postman">Teste de API com Postman</span>
+            </div>
+          </figcaption>
+        </figure>
+        
+        <figure class="tile">
+          <img src="assets/pagina_em.png" alt="Em desenvolvimento!" loading="lazy" />
+          <figcaption class="tile-caption">
+            <div class="tile-row">
+              <span class="tile-title" data-pt="Em desenvolvimento!" data-en="In development!">Em desenvolvimento!</span>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
     </section>
 
     <section id="curso" class="section container">
-      <h2>Curso de Informática</h2>
+      <h2 data-pt="Curso de Informática" data-en="Computer Course">Curso de Informática</h2>
       <article class="card">
-        <div class="curso-banner">
-          <a id="cursoBannerLink" href="#" target="_blank" rel="noopener" aria-label="Abrir página do curso">
-            <img id="cursoBanner" src="" alt="Banner do curso de informática" loading="lazy" onerror="this.style.display='none'" />
-          </a>
-        </div>
-        <p id="cursoDescricao">O Curso de Informática Básica foi desenvolvido para capacitar iniciantes no uso do computador e da tecnologia, oferecendo conhecimentos essenciais para o dia a dia, estudo e trabalho.
+        <p id="cursoDescricao" data-pt="O Curso de Informática Básica foi desenvolvido para capacitar iniciantes no uso do computador e da tecnologia, oferecendo conhecimentos essenciais para o dia a dia, estudo e trabalho. Com uma metodologia prática e progressiva, o curso aborda desde os fundamentos da informática até a utilização segura da internet e das principais ferramentas digitais. Ao longo das aulas, o aluno aprenderá a identificar e utilizar os componentes do computador, compreender a diferença entre hardware e software, dominar as funções do sistema operacional, realizar pesquisas na internet, criar documentos, planilhas e apresentações, além de adotar boas práticas de segurança digital. O conteúdo é organizado em módulos temáticos, com exercícios práticos, exemplos do cotidiano e linguagem acessível, garantindo aprendizado consistente e aplicável imediatamente." data-en="The Basic Computer Course was developed to train beginners in the use of computers and technology, offering essential knowledge for daily life, study and work. With a practical and progressive methodology, the course covers everything from the fundamentals of computing to the safe use of the internet and main digital tools. Throughout the classes, the student will learn to identify and use computer components, understand the difference between hardware and software, master operating system functions, conduct internet research, create documents, spreadsheets and presentations, in addition to adopting good digital security practices. The content is organized in thematic modules, with practical exercises, everyday examples and accessible language, ensuring consistent and immediately applicable learning.">
+          O Curso de Informática Básica foi desenvolvido para capacitar iniciantes no uso do computador e da tecnologia, oferecendo conhecimentos essenciais para o dia a dia, estudo e trabalho.
 
           Com uma metodologia prática e progressiva, o curso aborda desde os fundamentos da informática até a utilização segura da internet e das principais ferramentas digitais.
           
           Ao longo das aulas, o aluno aprenderá a identificar e utilizar os componentes do computador, compreender a diferença entre hardware e software, dominar as funções do sistema operacional, realizar pesquisas na internet, criar documentos, planilhas e apresentações, além de adotar boas práticas de segurança digital.
           
-          O conteúdo é organizado em módulos temáticos, com exercícios práticos, exemplos do cotidiano e linguagem acessível, garantindo aprendizado consistente e aplicável imediatamente.</p>
-        <a id="cursoLink" class="btn primary" href="https://hotm.art/dtemTreinamentos-informatica-t85Rri" target="_blank" rel="noopener">Acessar o curso</a>
+          O conteúdo é organizado em módulos temáticos, com exercícios práticos, exemplos do cotidiano e linguagem acessível, garantindo aprendizado consistente e aplicável imediatamente.
+        </p>
+        <a id="cursoLink" class="btn primary" href="https://hotm.art/dtemTreinamentos-informatica-t85Rri" target="_blank" rel="noopener" data-pt="Acessar o curso" data-en="Access the course">Acessar o curso</a>
       </article>
     </section>
 
     <section id="contato" class="section container">
-      <h2>Contato</h2>
-      <div class="contact-grid" id="contactLinks"></div>
-
+      <h2 data-pt="Contato" data-en="Contact">Contato</h2>
+      <div class="contact-grid" id="contactLinks">
+        <div class="contact">
+          <i class="bi bi-envelope-at-fill" aria-hidden="true"></i>
+          <a href="mailto:eduardo.santos.alves14@gmail.com" target="_blank" rel="noopener">E-mail</a>
+        </div>
+        <div class="contact">
+          <i class="bi bi-linkedin" aria-hidden="true"></i>
+          <a href="https://www.linkedin.com/in/eduardo-alves-124320b9/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="contact">
+          <i class="bi bi-github" aria-hidden="true"></i>
+          <a href="https://github.com/Eduardo-Alves1" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <div class="contact">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i>
+          <a href="https://api.whatsapp.com/send?phone=5511945968957" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Eduardo Alves. Todos os direitos reservados.</p>
+      <p data-pt="© <span id='year'></span> Eduardo Alves. Todos os direitos reservados." data-en="© <span id='year'></span> Eduardo Alves. All rights reserved.">© <span id="year"></span> Eduardo Alves. Todos os direitos reservados.</p>
     </div>
   </footer>
 

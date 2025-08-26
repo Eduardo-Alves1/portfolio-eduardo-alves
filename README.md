@@ -1,69 +1,137 @@
-# Portfólio de Eduardo Alves (QA)
+# Portfólio Eduardo Alves - QA Engineer
 
-Projeto de página única (one-page) estática. Edite `content.json` e a pasta `assets/` para adicionar imagens e experiências sem mexer no HTML.
+Portfólio profissional de Eduardo Alves, especialista em Quality Assurance (QA) com foco em automação de testes, qualidade de software e melhoria contínua.
 
-## Visualizar localmente
+## 🚀 Características
 
-Você pode usar um servidor HTTP simples (necessário Python 3):
+- **Design Responsivo**: Interface moderna e adaptável a todos os dispositivos
+- **Tema Claro/Escuro**: Alternância automática baseada na preferência do sistema
+- **Multilíngue**: Suporte completo para Português e Inglês
+- **Performance Otimizada**: Carregamento rápido e eficiente
+- **SEO Otimizado**: Metadados e estrutura semântica para melhor indexação
+- **Analytics**: Integração com Google Analytics para acompanhamento de métricas
 
-```bash
-cd /home/eduardo/portfolio-eduardo-alves
-python3 -m http.server 8000
+## 🛠️ Tecnologias Utilizadas
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Estilização**: CSS Custom Properties, Grid Layout, Flexbox
+- **Ícones**: Bootstrap Icons
+- **Fontes**: Inter (Google Fonts)
+- **Analytics**: Google Analytics 4
+
+## 📁 Estrutura do Projeto
+
+```
+portfolio-eduardo-alves/
+├── index.html          # Página principal com conteúdo integrado
+├── script.js           # Lógica JavaScript e funcionalidades
+├── styles.css          # Estilos CSS e temas
+├── assets/             # Imagens e recursos
+│   ├── perfil.jpeg     # Foto de perfil
+│   ├── cypreslogo.jpg  # Logo Cypress
+│   ├── POSTMAN.png     # Logo Postman
+│   ├── pagina_em.png   # Imagem "em desenvolvimento"
+│   └── cv.pdf          # Currículo em PDF
+├── CNAME               # Configuração de domínio personalizado
+└── README.md           # Este arquivo
 ```
 
-Depois acesse: http://localhost:8000
+## ✨ Funcionalidades
 
-## Estrutura
+### 🌓 Sistema de Temas
+- Alternância automática entre tema claro e escuro
+- Preferência salva no localStorage
+- Detecção automática da preferência do sistema
 
-- `index.html`: layout da página
-- `styles.css`: estilos (tema claro/escuro)
-- `script.js`: carrega `content.json` e renderiza as seções
-- `content.json`: conteúdo editável (texto, experiências, projetos, contatos)
-- `assets/`: coloque aqui suas imagens (perfil, projetos)
+### 🌍 Sistema de Idiomas
+- Suporte completo para Português e Inglês
+- Tradução automática de todo o conteúdo
+- Preferência salva no localStorage
+- Botão de alternância na navegação
 
-## Como adicionar imagens e experiências
+### 📊 Analytics Integrado
+- Rastreamento de downloads de CV
+- Monitoramento de cliques em contatos
+- Acompanhamento de acessos ao curso
+- Métricas de visualização de projetos
 
-1) Coloque as imagens na pasta `assets/` (ex.: `assets/perfil.jpg`, `assets/projeto1.jpg`).
-2) Edite `content.json` e atualize os caminhos das imagens e os campos desejados.
-3) Recarregue a página. Como o navegador pode fazer cache, durante a edição é melhor usar a página servida pelo `http.server` (o script já usa `cache: 'no-store'`).
+### 📱 Design Responsivo
+- Layout adaptável para mobile, tablet e desktop
+- Navegação otimizada para dispositivos móveis
+- Imagens responsivas com lazy loading
 
-### Exemplo de nova experiência
+## 🚀 Como Usar
 
-Adicione um objeto em `experiencia`:
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/portfolio-eduardo-alves.git
+   cd portfolio-eduardo-alves
+   ```
 
-```json
-{
-  "empresa": "Acme Corp",
-  "cargo": "QA Engenheiro",
-  "inicio": "Mar/2024",
-  "fim": "Atual",
-  "local": "Remoto",
-  "responsabilidades": [
-    "Cobertura de testes E2E",
-    "Monitoramento de qualidade"
-  ],
-  "stack": ["Playwright", "GitLab CI"]
+2. **Abra o projeto**:
+   - Abra o arquivo `index.html` em qualquer navegador moderno
+   - Ou use um servidor local:
+     ```bash
+     python3 -m http.server 8000
+     # Acesse http://localhost:8000
+     ```
+
+3. **Personalize o conteúdo**:
+   - Edite diretamente o arquivo `index.html`
+   - Modifique os atributos `data-pt` e `data-en` para alterar textos
+   - Atualize as imagens na pasta `assets/`
+
+## 🔧 Personalização
+
+### Alterando Textos
+Todos os textos estão integrados no HTML com atributos de tradução:
+```html
+<h2 data-pt="Sobre" data-en="About">Sobre</h2>
+```
+
+### Adicionando Novas Seções
+Para adicionar uma nova seção:
+1. Crie a estrutura HTML
+2. Adicione os atributos `data-pt` e `data-en`
+3. Atualize o JavaScript se necessário
+
+### Modificando Estilos
+Os estilos estão organizados em `styles.css` com variáveis CSS para fácil personalização:
+```css
+:root {
+  --primary: #6ea8fe;
+  --accent: #58d6a8;
+  --bg: #0f1221;
 }
 ```
 
-### Exemplo de novo projeto/galeria
+## 📈 Performance
 
-```json
-{ "titulo": "Dashboard de Qualidade", "imagem": "assets/dashboard.jpg", "link": "https://example.com" }
-```
+- **Lazy Loading**: Imagens carregam conforme necessário
+- **CSS Otimizado**: Uso de variáveis CSS e seletores eficientes
+- **JavaScript Modular**: Código organizado e sem dependências externas
+- **Assets Otimizados**: Imagens e recursos otimizados para web
 
-## Dicas
+## 🌐 Deploy
 
-- Para trocar para tema claro, clique no botão 🌓 (preferência é lembrada).
-- Se a foto de perfil não existir, ela some automaticamente.
-- Use imagens otimizadas (JPG comprimido para fotos, PNG/SVG para gráficos).
-
-## Deploy gratuito (opcional)
-
-Você pode publicar facilmente em serviços estáticos:
+O projeto está configurado para deploy em:
 - GitHub Pages
 - Netlify
 - Vercel
+- Qualquer servidor web estático
 
-Se quiser, posso preparar os arquivos de deploy (por exemplo, `vercel.json` ou workflow do GitHub Pages).
+## 📞 Contato
+
+- **E-mail**: eduardo.santos.alves14@gmail.com
+- **LinkedIn**: [Eduardo Alves](https://www.linkedin.com/in/eduardo-alves-124320b9/)
+- **GitHub**: [Eduardo-Alves1](https://github.com/Eduardo-Alves1)
+- **WhatsApp**: +55 11 94596-8957
+
+## 📄 Licença
+
+Este projeto é de uso pessoal e profissional. Todos os direitos reservados.
+
+---
+
+**Desenvolvido com ❤️ por Eduardo Alves**
 
