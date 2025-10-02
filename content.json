@@ -3,14 +3,32 @@
     "photo": "assets/perfil.jpeg"
   },
   "sobre": {
-    "texto": "Profissional de QA com foco em automação de testes, qualidade de software e melhoria contínua. Experiência com pipelines CI/CD, testes E2E e testes de API.",
-    "skills": ["QA", "Testes Manuais","Testes Automatizados", "Cypress", "Playwright", "Selenium","Robot Framework", "Postman", "Jest", "Git", "CI/CD", "Python", "Java", "JavaScript", "SQL", "HTML", "CSS"]
+    "texto": "Profissional com sólida trajetória em Quality Assurance, com ampla experiência em automação de testes para aplicações Web, API e Mobile. Atuo com fluência em frameworks como Java com Selenium, Cypress e Python, além de ferramentas como Rest Assured, Appium, Postman, Jenkins, JMeter e pipelines de CI/CD.\n\nTenho forte envolvimento em metodologias ágeis, promovendo a qualidade desde as fases iniciais do desenvolvimento (princípio shift left) e colaborando de forma integrada com times de produto e desenvolvimento para garantir entregas de alto valor.\n\nSou movido por uma mentalidade de melhoria contínua, buscando sempre evoluir em habilidades técnicas, boas práticas de teste e liderança em QA.\n\nAberto a colaborações, mentorias e novas oportunidades na área de Engenharia de Qualidade de Software."
   },
+  "skills": [
+    "QA",
+    "Testes Manuais",
+    "Testes Automatizados",
+    "Cypress",
+    "Playwright",
+    "Selenium",
+    "Robot Framework",
+    "Postman",
+    "Jest",
+    "Git",
+    "CI/CD",
+    "Python",
+    "Java",
+    "JavaScript",
+    "SQL",
+    "HTML",
+    "CSS"
+  ],
   "experiencia": [
     {
       "empresa": "E2E Coders",
       "cargo": "QA Engineer",
-      "inicio": "Jan/2025",
+      "inicio": "Jan/2023",
       "fim": "Atual",
       "local": "Remoto",
       "responsabilidades": [
@@ -22,7 +40,14 @@
         "Realizo testes exploratórios e de regressão com foco na identificação precoce de falhas",
         "Registro, acompanho e colaboro na resolução de defeitos usando ferramentas de gestão de incidentes"
       ],
-      "stack": ["Cypress", "GitHub Actions", "TypeScript", "Selenium", "Java", "JUnit"]
+      "stack": [
+        "Cypress",
+        "GitHub Actions",
+        "TypeScript",
+        "Selenium",
+        "Java",
+        "JUnit"
+      ]
     },
     {
       "empresa": "Ituran Brasil",
@@ -38,10 +63,13 @@
         "Análise de dados e indicadores de uso da plataforma, propondo melhorias com base em insights estratégicos.",
         "Desenvolvimento de treinamentos personalizados para capacitação dos usuários finais."
       ],
-      "stack": ["Python", "Selenium", "PyAutoGUI"]
+      "stack": [
+        "Python",
+        "Selenium",
+        "PyAutoGUI"
+      ]
     }
-  ],  
-  
+  ],
   "squads": [
     {
       "squad": "Squad Onboarding",
@@ -55,19 +83,45 @@
     }
   ],
   "projetos": [
-    { "titulo": "Suite E2E com Cypress", "imagem": "assets/cypreslogo.jpg","link": "https://github.com/Eduardo-Alves1/E2EPLATAFORMA" },
-    { "titulo": "Teste de API com Postman", "imagem": "assets/POSTMAN.png", "link": "#" },
-    { "titulo": "Em desenvolvimento!", "imagem": "assets/pagina_em.png" }
+    {
+      "titulo": "Suite E2E com Cypress",
+      "imagem": "assets/cypreslogo.jpg",
+      "link": "https://github.com/Eduardo-Alves1/E2EPLATAFORMA"
+    },
+    {
+      "titulo": "Teste de API com Postman",
+      "imagem": "assets/POSTMAN.png",
+      "link": "#"
+    },
+    {
+      "titulo": "Em desenvolvimento!",
+      "imagem": "assets/pagina_em.png"
+    }
   ],
   "contatos": [
-    { "label": "E-mail", "url": "mailto:eduardo.santos.alves14@gmail.com", "icone": "bi-envelope-at-fill" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/eduardo-alves-124320b9/", "icone": "bi-linkedin" },
-    { "label": "GitHub", "url": "https://github.com/Eduardo-Alves1", "icone": "bi-github" },
-    { "label": "WhatsApp", "url": "https://api.whatsapp.com/send?phone=5511945968957", "icone": "bi-whatsapp" }
+    {
+      "label": "E-mail",
+      "url": "mailto:eduardo.santos.alves14@gmail.com",
+      "icone": "bi-envelope-at-fill"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/eduardo-alves-124320b9/",
+      "icone": "bi-linkedin"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/Eduardo-Alves1",
+      "icone": "bi-github"
+    },
+    {
+      "label": "WhatsApp",
+      "url": "https://api.whatsapp.com/send?phone=5511945968957",
+      "icone": "bi-whatsapp"
+    }
   ],
   "cv": {
     "url": "assets/cv.pdf",
     "nome": "Eduardo_Alves_CV.pdf"
   }
 }
-

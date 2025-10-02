@@ -123,9 +123,12 @@
 
     // Sobre
     if (data.sobre?.texto) byId('sobreText').textContent = data.sobre.texto;
-    if (Array.isArray(data.sobre?.skills)) {
+    const skillsInit = Array.isArray(data.skills)
+      ? data.skills
+      : (Array.isArray(data.sobre?.skills) ? data.sobre.skills : null);
+    if (skillsInit) {
       const ul = byId('skillsBadges');
-      ul.innerHTML = data.sobre.skills.map(s => `<li>${s}</li>`).join('');
+      ul.innerHTML = skillsInit.map(s => `<li>${s}</li>`).join('');
     }
 
     // Experiência
@@ -264,9 +267,12 @@
         // Re-renderizar seções com base no novo idioma
         // Sobre
         if (data.sobre?.texto) byId('sobreText').textContent = data.sobre.texto;
-        if (Array.isArray(data.sobre?.skills)) {
+        const skillsToggle = Array.isArray(data.skills)
+          ? data.skills
+          : (Array.isArray(data.sobre?.skills) ? data.sobre.skills : null);
+        if (skillsToggle) {
           const ul = byId('skillsBadges');
-          ul.innerHTML = data.sobre.skills.map(s => `\u003cli\u003e${s}\u003c/li\u003e`).join('');
+          ul.innerHTML = skillsToggle.map(s => `\u003cli\u003e${s}\u003c/li\u003e`).join('');
         }
         // Experiência
         if (Array.isArray(data.experiencia)) {
