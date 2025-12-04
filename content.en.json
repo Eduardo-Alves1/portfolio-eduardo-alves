@@ -3,7 +3,7 @@
     "photo": "assets/perfil.jpeg"
   },
   "sobre": {
-    "texto": "QA professional focused on test automation, software quality and continuous improvement. Experience with CI/CD pipelines, E2E testing and API testing.",
+    "texto": "Quality Assurance (QA) professional with a solid track record, extensive experience in automating functional, API and mobile tests across Web and Backend projects. Specialist in ensuring software quality from the earliest stages of development (Shift-Left Testing), with a focus on continuous improvement, agile integration and high-value delivery.\n\nI work with modern automation frameworks such as Selenium WebDriver, Cypress, Playwright, Appium, Robot Framework and Cucumber (BDD), following Page Object Model (POM) best practices and end-to-end (E2E) testing. I have experience in API testing using Postman, Insomnia and REST Assured, as well as performance testing with JMeter, LoadRunner and k6.\n\nI actively participate in CI/CD pipelines with Jenkins and GitHub Actions, ensuring continuous integration and consistent releases. Strong experience in test management and traceability using Jira, Azure DevOps, TestRail and Confluence, and version control with Git, GitHub and GitLab.\n\nI am deeply involved in agile methodologies (Scrum and Kanban), promoting quality from planning to final delivery. I collaborate with development, product and DevOps teams for root cause analysis, definition of acceptance criteria and Shift-Left and DevTestOps practices.\n\nDriven by a mindset of continuous improvement and technical excellence, I constantly evolve in testing best practices, automation and QA leadership.\n\nOpen to collaborations, mentoring and new opportunities in Software Quality Engineering, focusing on QA Automation, Agile Testing, CI/CD and DevOps Culture.\n\nKey Competencies:\n Quality Assurance · QA Engineer · Test Automation · Manual Testing · API Testing · Web Testing · Mobile Testing · BDD · Gherkin · Selenium · Cypress · Playwright · Appium · Robot Framework · REST Assured · JMeter · Jenkins · GitHub Actions · Jira · Azure DevOps · TestRail · Git · CI/CD · DevOps · Agile Testing · Scrum · Kanban · Shift-Left Testing · Software Quality",
     "skills": ["QA", "Manual Testing","Test Automation", "Cypress", "Playwright", "Selenium","Robot Framework", "Postman", "Jest", "Git", "CI/CD", "Python", "Java", "JavaScript", "SQL", "HTML", "CSS"]
   },
   "experiencia": [
@@ -14,15 +14,53 @@
       "fim": "Present",
       "local": "Remote",
       "responsabilidades": [
-        "I integrate QA practices into agile processes (Scrum/Kanban) with a focus on continuous improvement",
-        "I conduct manual and automated tests, ensuring functional coverage and system stability",
-        "I create and document clear and objective test cases",
-        "Slack – Communication with squads",
-        "Visual Studio Code – Development and versioning of scripts",
-        "I perform exploratory and regression testing to identify issues early",
-        "I log, track and collaborate on resolving defects using incident management tools"
+        "Quality Assurance specialist, passionate about implementing quality practices from the earliest stages of development (Shift-Left Testing).",
+        "Collaborative work in agile (Scrum/Kanban) and cross-functional teams, ensuring robust, scalable deliveries aligned with business requirements.",
+        "QA integration into agile methodologies with a focus on continuous improvement and DevOps.",
+        "Planning and execution of functional, non-functional, regression, smoke, sanity and exploratory tests.",
+        "Development and maintenance of test cases, test plans and test strategies.",
+        "Test automation implementation with Selenium WebDriver, Cypress, Playwright and Robot Framework, following Page Object Model (POM) best practices.",
+        "BDD (Gherkin) execution with Cucumber and JUnit in end-to-end integrations.",
+        "Mobile flow automation with Appium, ensuring Android and iOS compatibility.",
+        "API testing with Postman, Insomnia and REST Assured, validating integration and performance.",
+        "Performance testing with JMeter, LoadRunner and k6 (basic).",
+        "CI/CD pipeline configuration with Jenkins and GitHub Actions.",
+        "Defect management and traceability using Jira, Azure DevOps, TestRail and Confluence.",
+        "Participation in refinements, reviews and root cause analysis, promoting continuous improvement and collaboration across teams.",
+        "Automation: Selenium · Cypress · Playwright · Robot Framework · Appium",
+        "API: Postman · Insomnia · REST Assured",
+        "Performance: JMeter · LoadRunner · k6",
+        "CI/CD: Jenkins · GitHub Actions",
+        "Management: Jira · Azure DevOps · TestRail · Confluence",
+        "Version control: Git · GitHub · GitLab"
       ],
-      "stack": ["Cypress", "GitHub Actions", "TypeScript", "Selenium", "Java", "JUnit"]
+      "stack": [
+        "Selenium WebDriver",
+        "Cypress",
+        "Playwright",
+        "Robot Framework",
+        "Appium",
+        "Cucumber",
+        "JUnit",
+        "Postman",
+        "Insomnia",
+        "REST Assured",
+        "JMeter",
+        "LoadRunner",
+        "k6",
+        "Jenkins",
+        "GitHub Actions",
+        "Jira",
+        "Azure DevOps",
+        "TestRail",
+        "Confluence",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "TypeScript",
+        "Java",
+        "Python"
+      ]
     },
     {
       "empresa": "Ituran Brasil",
