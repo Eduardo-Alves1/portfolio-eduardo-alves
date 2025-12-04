@@ -104,8 +104,8 @@
     { "label": "WhatsApp", "url": "https://api.whatsapp.com/send?phone=5511945968957", "icone": "bi-whatsapp" }
   ],
   "cv": {
-    "url": "assets/cv_Eduardo_Alves_QA.pdf",
-    "nome": "Eduardo_Alves_CV.pdf"
+    "url": "assets/Eduardo_Alves_QA.pdf",
+    "nome": "Eduardo_Alves_QA.pdf"
   }
 }
 
