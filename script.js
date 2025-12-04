@@ -321,6 +321,17 @@
             \u003c/div\u003e
           `).join('');
         }
+        // CV
+        const cvBtnToggle = document.getElementById('cvDownload');
+        if (cvBtnToggle) {
+          if (data.cv?.url) {
+            cvBtnToggle.href = data.cv.url;
+            if (data.cv.nome) cvBtnToggle.setAttribute('download', data.cv.nome);
+            cvBtnToggle.style.display = 'inline-block';
+          } else {
+            cvBtnToggle.style.display = 'none';
+          }
+        }
       });
     }
     
